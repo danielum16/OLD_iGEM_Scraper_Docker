@@ -1,0 +1,14 @@
+version: "2.1"
+services: 
+  frontend: 
+    build: iGEM_Scraper_React
+    image: frontend-container:v1
+    container_name: frontend-container
+    ports: 
+      - 3000:3000/tcp
+  backend: 
+    build: iGEM_Scraper_Django
+    image: backend-container:v1
+    container_name: backend-container
+    ports:
+      - 8000:8000/tcp
